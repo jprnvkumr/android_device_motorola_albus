@@ -10,7 +10,6 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
@@ -81,18 +80,6 @@
         <activity
             android:name=".GestureSettingsActivity"
             android:label="@string/device_gestures_title"
-            android:theme="@style/MotoActions">
-        </activity>
-
-        <activity
-            android:name=".FPGestureSettingsActivity"
-            android:label="@string/fingerprint_gestures_title"
-            android:theme="@style/MotoActions">
-        </activity>
-
-        <activity
-            android:name=".ScreenOffGestureSettingsActivity"
-            android:label="@string/screen_off_gestures_title"
             android:theme="@style/MotoActions">
         </activity>
 

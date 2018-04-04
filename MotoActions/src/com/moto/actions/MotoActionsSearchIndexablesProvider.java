@@ -48,23 +48,10 @@ public class MotoActionsSearchIndexablesProvider extends SearchIndexablesProvide
                     GestureSettingsActivity.class.getName(),
                     R.drawable.ic_settings_gestures)));
 
-        cursor.addRow(generateResourceRef(new SearchIndexableResource(1, R.xml.fp_gesture_panel,
-                    FPGestureSettingsActivity.class.getName(),
-                    R.drawable.ic_settings_fingerprint)));
-        cursor.addRow(generateResourceRef(new SearchIndexableResource(1, R.xml.fp_gesture_panel_indexable,
-                    FPGestureSettingsActivity.class.getName(),
-                    R.drawable.ic_settings_fingerprint)));
-
-        cursor.addRow(generateResourceRef(new SearchIndexableResource(1, R.xml.screen_off_gesture_panel,
-                    ScreenOffGestureSettingsActivity.class.getName(),
-                    R.drawable.ic_settings_screen_off_gestures)));
-        cursor.addRow(generateResourceRef(new SearchIndexableResource(1, R.xml.screen_off_gesture_panel_indexable,
-                    ScreenOffGestureSettingsActivity.class.getName(),
-                    R.drawable.ic_settings_screen_off_gestures)));
-
         cursor.addRow(generateResourceRef(new SearchIndexableResource(1, R.xml.doze_panel,
                     DozeSettingsActivity.class.getName(),
                     R.drawable.ic_settings_doze)));
+
         cursor.addRow(generateResourceRef(new SearchIndexableResource(1, R.xml.doze_panel_indexable,
                     DozeSettingsActivity.class.getName(),
                     R.drawable.ic_settings_doze)));
