@@ -118,10 +118,42 @@ on boot
     chown bluetooth bluetooth /dev/ttyHS2
 	
 	# Fix ef mode in batterysnap
-	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/eb_on_sw
-	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/eb_on_sw
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/dynamic_icl_wipower_en
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/dynamic_icl_wipower_en
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/eb_attach_start_soc
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/eb_attach_start_soc
 	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/eb_attach_stop_soc
 	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/eb_attach_stop_soc
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/eb_low_start_soc
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/eb_low_start_soc
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/eb_low_stop_soc
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/eb_low_stop_soc
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/eb_on_sw
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/eb_on_sw
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/eb_rechrg_start_soc
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/eb_rechrg_start_soc
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/eb_rechrg_stop_soc
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/eb_rechrg_stop_soc
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/factory_kill_disable
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/factory_kill_disable
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/parallel_en
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/parallel_en
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/usr_rst_sw_disable
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/usr_rst_sw_disable
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/vf_adjust_high_threshold
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/vf_adjust_high_threshold
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/vf_adjust_low_threshold
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/vf_adjust_low_threshold
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/vf_adjust_max_delta_mv
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/vf_adjust_max_delta_mv
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/vf_adjust_n_samples
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/vf_adjust_n_samples
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/vf_adjust_trim_steps_per_adjust
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/vf_adjust_trim_steps_per_adjust
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/wipower_dcin_hyst_uv
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/wipower_dcin_hyst_uv
+	chown system system /sys/module/qpnp_smbcharger_mmi/parameters/wipower_dcin_interval
+	chmod 0666 /sys/module/qpnp_smbcharger_mmi/parameters/wipower_dcin_interval
 	
    
     # Allow access to sensors device attributes
