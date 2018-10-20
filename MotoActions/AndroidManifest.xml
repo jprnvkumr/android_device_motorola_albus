@@ -50,15 +50,7 @@
             </intent-filter>
         </service>
 
-        <activity
-            android:name=".DozeSettingsActivity"
-            android:label="@string/ambient_display_title"
-            android:theme="@style/MotoActions">
-            <intent-filter>
-                <action android:name="com.moto.actions.DOZE_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+        
 
         <activity
             android:name=".ActionsPreferenceActivity"
