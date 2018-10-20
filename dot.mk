@@ -25,8 +25,6 @@ $(call inherit-product, vendor/dot/config/common.mk)
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
-export DOT_OFFICIAL=true
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := albus
 PRODUCT_NAME := viper_albus
