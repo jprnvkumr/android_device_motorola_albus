@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2017 The AOSP Project
+ * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,6 +63,7 @@ public class Constants {
     public static final int ACTION_DIALER = 117;
     public static final int ACTION_EMAIL = 118;
     public static final int ACTION_MESSAGES = 119;
+    public static final int ACTION_PIP = 120;
     public static final int ACTION_LAST_APP = 121;
     public static final int[] sFPSupportedActions = new int[]{
             ACTION_HOME,
@@ -77,6 +79,7 @@ public class Constants {
             ACTION_FLASHLIGHT,
             ACTION_CAMERA,
             ACTION_SCREENSHOT,
+            ACTION_PIP,
             ACTION_LAST_APP
     };
     public static final int[] sFPSupportedActionsScreenOff = new int[]{

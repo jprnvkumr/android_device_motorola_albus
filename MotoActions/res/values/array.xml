@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The AOSP Project
+     Copyright (C) 2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,6 +31,7 @@
         <item>@string/action_flashlight</item>
         <item>@string/action_camera</item>
         <item>@string/action_screenshot</item>
+        <item>@string/action_pip</item>
     </string-array>
     <string-array name="fp_keys_listValues">
         <item>0</item>
@@ -48,6 +49,7 @@
         <item>110</item> <!-- flashlight -->
         <item>111</item> <!-- camera -->
         <item>112</item> <!-- screenshot -->
+        <item>120</item> <!-- pip -->
     </string-array>
 
     <string-array name="fp_keys_screen_off_listArray">
