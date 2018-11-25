@@ -144,7 +144,6 @@
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
-         <item>"bnep\\d"</item>
          <item>"bt-pan"</item>
     </string-array>
 
@@ -152,8 +151,8 @@
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
          [0,1,5,7] for TYPE_MOBILE, TYPE_WIFI, TYPE_MOBILE_HIPRI and TYPE_BLUETOOTH -->
     <integer-array translatable="false" name="config_tether_upstream_types">
-        <item>0</item>
         <item>1</item>
+        <item>0</item>
         <item>5</item>
         <item>7</item>
     </integer-array>
@@ -206,9 +205,9 @@
     <bool name="config_useDevInputEventForAudioJack">true</bool>
 
     <!-- Enable overlay for all location components. -->
-    <bool name="config_enableNetworkLocationOverlay" translatable="false">false</bool>
+    <bool name="config_enableNetworkLocationOverlay" translatable="false">true</bool>
     <string name="config_networkLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
-    <bool name="config_enableFusedLocationOverlay" translatable="false">false</bool>
+    <bool name="config_enableFusedLocationOverlay" translatable="false">true</bool>
     <string name="config_fusedLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
 
     <!-- Maximum number of supported users -->
@@ -316,8 +315,8 @@
 
     <!-- Should the pinner service pin the Camera application? -->
     <bool name="config_pinnerCameraApp">true</bool>
-
-    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+	
+	<!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
@@ -346,10 +345,9 @@
     -->
     <integer name="config_screenPinningExitMode">2</integer>
 
-    <!-- Whether device has turbo power charging support -->
-    <bool name="config_hasTurboPowerCharger">true</bool>
-
     <!-- Whether navigation bar can be disabled (for devices with hardware keys) -->
     <bool name="config_canDisableNavigationBar">true</bool>
 
+    <!-- Whether device has turbo power charging support -->
+    <bool name="config_hasTurboPowerCharger">true</bool>
 </resources>
