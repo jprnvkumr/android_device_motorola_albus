@@ -18,8 +18,8 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/albus/full_albus.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Havoc stuff.
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -27,7 +27,7 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := albus
-PRODUCT_NAME := lineage_albus
+PRODUCT_NAME := havoc_albus
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto Z2 Play
 PRODUCT_MANUFACTURER := motorola
@@ -40,4 +40,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=albus \
     PRIVATE_BUILD_DESC="albus-user 8.0.0 OPSS27.76-12-25-3 4 release-keys"
 
-BUILD_FINGERPRINT := motorola/albus/albus:8.0.0/OPSS27.76-12-25-3/4:user/release-keys
+BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
