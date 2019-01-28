@@ -1,6 +1,6 @@
 cc_binary {
-    name: "android.hardware.health@2.0-service.potter",
-    init_rc: ["android.hardware.health@2.0-service.potter.rc"],
+    name: "android.hardware.health@2.0-service.albus",
+    init_rc: ["android.hardware.health@2.0-service.albus.rc"],
     proprietary: true,
     relative_install_path: "hw",
     srcs: [

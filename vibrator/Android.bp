@@ -13,9 +13,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 cc_binary {
-    name: "android.hardware.vibrator@1.0-service.potter",
+    name: "android.hardware.vibrator@1.0-service.albus",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.vibrator@1.0-service.potter.rc"],
+    init_rc: ["android.hardware.vibrator@1.0-service.albus.rc"],
     srcs: ["service.cpp", "Vibrator.cpp"],
     cflags: ["-Wall", "-Werror"],
     shared_libs: [
