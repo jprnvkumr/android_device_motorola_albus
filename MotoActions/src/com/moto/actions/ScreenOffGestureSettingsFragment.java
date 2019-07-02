@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 The AOSP Project
+ * Copyright (c) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,6 +26,8 @@ import android.view.MenuItem;
 import static android.provider.Settings.Secure.DOUBLE_TAP_TO_WAKE;
 import static com.moto.actions.actions.Constants.KEY_GESTURE_ENABLE_HAPTIC_FEEDBACK;
 import static com.moto.actions.actions.Constants.KEY_GESTURE_ENABLE_PROXIMITY_SENSOR;
+
+import com.moto.actions.utils.ProximityUtils;
 
 public class ScreenOffGestureSettingsFragment extends PreferenceFragment {
 
@@ -74,6 +76,11 @@ public class ScreenOffGestureSettingsFragment extends PreferenceFragment {
                 return true;
             }
         });
+
+        if (!ProximityUtils.isProximityWakeEnabled(getActivity()) && mProximitySensor != null){
+            getPreferenceScreen().removePreference(mProximitySensor);
+            mProximitySensor = null;
+        }
     }
 
 }

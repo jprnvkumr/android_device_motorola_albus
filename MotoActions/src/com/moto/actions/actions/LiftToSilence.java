@@ -1,5 +1,6 @@
 /*
- * Copyright (c) 2017 The AOSP Project
+ * Copyright (c) 2016 The CyanogenMod Project
+ * Copyright (c) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,9 +44,9 @@ public class LiftToSilence extends PhoneStateListener implements SensorEventList
     private boolean mIsStowed;
     private boolean mLastFlatUp;
 
-    public LiftToSilence(MotoActionsSettings MotoActionsSettings, Context context,
+    public LiftToSilence(MotoActionsSettings motoActionsSettings, Context context,
                 SensorHelper sensorHelper) {
-        mMotoActionsSettings = MotoActionsSettings;
+        mMotoActionsSettings = motoActionsSettings;
         mSensorHelper = sensorHelper;
         mFlatUpSensor = sensorHelper.getFlatUpSensor();
         mStowSensor = sensorHelper.getStowSensor();

@@ -1,5 +1,6 @@
 /*
- * Copyright (c) 2017 The AOSP Project
+ * Copyright (c) 2015 The CyanogenMod Project
+ * Copyright (c) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,9 +38,9 @@ public class ProximitySensor implements ScreenStateNotifier, SensorEventListener
 
     private boolean mSawNear = false;
 
-    public ProximitySensor(MotoActionsSettings MotoActionsSettings, SensorHelper sensorHelper,
+    public ProximitySensor(MotoActionsSettings motoActionsSettings, SensorHelper sensorHelper,
                 SensorAction action) {
-        mMotoActionsSettings = MotoActionsSettings;
+        mMotoActionsSettings = motoActionsSettings;
         mSensorHelper = sensorHelper;
         mSensorAction = action;
 

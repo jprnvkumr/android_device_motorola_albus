@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 The AOSP Project
+ * Copyright (c) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,8 +17,8 @@
 package com.moto.actions.doze;
 
 import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
+import android.hardware.TriggerEvent;
+import android.hardware.TriggerEventListener;
 import android.util.Log;
 
 import com.moto.actions.MotoActionsSettings;
@@ -31,28 +31,24 @@ public class GlanceSensor implements ScreenStateNotifier {
     private final MotoActionsSettings mMotoActionsSettings;
     private final SensorHelper mSensorHelper;
     private final SensorAction mSensorAction;
-    
     private final Sensor mSensor;
-    private final Sensor mApproachSensor;
 
     private boolean mEnabled;
 
-    public GlanceSensor(MotoActionsSettings MotoActionsSettings, SensorHelper sensorHelper,
+    public GlanceSensor(MotoActionsSettings motoActionsSettings, SensorHelper sensorHelper,
                 SensorAction action) {
-        mMotoActionsSettings = MotoActionsSettings;
+        mMotoActionsSettings = motoActionsSettings;
         mSensorHelper = sensorHelper;
         mSensorAction = action;
 
         mSensor = sensorHelper.getGlanceSensor();
-        mApproachSensor = sensorHelper.getApproachGlanceSensor();
     }
 
     @Override
     public void screenTurnedOn() {
         if (mEnabled) {
             Log.d(TAG, "Disabling");
-            mSensorHelper.unregisterListener(mGlanceListener);
-            mSensorHelper.unregisterListener(mApproachGlanceListener);
+            mSensorHelper.cancelTriggerSensor(mSensor, mGlanceListener);
             mEnabled = false;
         }
     }
@@ -61,33 +57,17 @@ public class GlanceSensor implements ScreenStateNotifier {
     public void screenTurnedOff() {
         if (mMotoActionsSettings.isPickUpEnabled() && !mEnabled) {
             Log.d(TAG, "Enabling");
-            mSensorHelper.registerListener(mSensor, mGlanceListener);
-            mSensorHelper.registerListener(mSensor, mApproachGlanceListener);
+            mSensorHelper.requestTriggerSensor(mSensor, mGlanceListener);
             mEnabled = true;
         }
     }
 
-    private SensorEventListener mGlanceListener = new SensorEventListener() {
+    private TriggerEventListener mGlanceListener = new TriggerEventListener() {
         @Override
-        public synchronized void onSensorChanged(SensorEvent event) {
-            Log.d(TAG, "Changed");
+        public void onTrigger(TriggerEvent event) {
+            Log.d(TAG, "triggered");
             mSensorAction.action();
-        }
-
-        @Override
-        public void onAccuracyChanged(Sensor mSensor, int accuracy) {
-        }
-    };
-
-    private SensorEventListener mApproachGlanceListener = new SensorEventListener() {
-        @Override
-        public synchronized void onSensorChanged(SensorEvent event) {
-            Log.d(TAG, "Approach: Changed");
-            mSensorAction.action();
-        }
-
-        @Override
-        public void onAccuracyChanged(Sensor mSensor, int accuracy) {
+            mSensorHelper.requestTriggerSensor(mSensor, mGlanceListener);
         }
     };
 }
