@@ -1,5 +1,6 @@
 /*
- * Copyright (c) 2017 The AOSP Project
+ * Copyright (c) 2015 The CyanogenMod Project
+ * Copyright (c) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,12 +45,12 @@ public class ProximitySilencer extends PhoneStateListener implements SensorEvent
     private long mRingStartedMs;
     private boolean mCoveredRinging;
 
-    public ProximitySilencer(MotoActionsSettings MotoActionsSettings, Context context,
+    public ProximitySilencer(MotoActionsSettings motoActionsSettings, Context context,
                 SensorHelper sensorHelper) {
         mTelecomManager = (TelecomManager) context.getSystemService(Context.TELECOM_SERVICE);
         mTelephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
 
-        mMotoActionsSettings = MotoActionsSettings;
+        mMotoActionsSettings = motoActionsSettings;
         mSensorHelper = sensorHelper;
         mSensor = sensorHelper.getProximitySensor();
         mCoveredRinging = false;
