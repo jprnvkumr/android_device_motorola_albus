@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013-2016 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Title and summary -->
+    <string name="moto_actions_title">Acciones Moto</string>
+
+    <!-- Device gestures -->
+    <string name="device_gestures_title">Gestos del dispositivo</string>
+    <string name="device_gestures_summary">Configurar gestos</string>
+
+    <!-- Ambient display gestures -->
+    <string name="ambient_display_manage_summary">Configurar gestos de pantalla ambiente</string>
+
+    <!-- Fingerprint gestures -->
+    <string name="fingerprint_gestures_title">Gestos de huella digital </string>
+    <string name="fingerprint_gestures_summary">Usar gestos de huella digital</string>
+    <string name="fingerprint_gestures_manage_summary">Administrar gestos</string>
+    <string name="fingerprint_actions_screenon">Acciones con la pantalla encendida</string>
+    <string name="fingerprint_tap_title">Un toque</string>
+    <string name="fingerprint_tap_dlg_title">Seleccionar acción para un toque</string>
+    <string name="fingerprint_double_tap_title">Doble toque</string>
+    <string name="fingerprint_double_tap_dlg_title">Seleccionar acción para doble toque</string>
+    <string name="fingerprint_long_tap_title">Toque largo</string>
+    <string name="fingerprint_long_tap_dlg_title">Seleccionar acción para toque largo</string>
+    <string name="fingerprint_swipe_left_title">Deslizar derecha</string>
+    <string name="fingerprint_swipe_left_dlg_title">Seleccionar acción para deslizar derecha</string>
+    <string name="fingerprint_swipe_right_title">Deslizar izquierda</string>
+    <string name="fingerprint_swipe_right_dlg_title">Sellecionar acción para deslizar izquierda</string>
+
+    <!-- Screen on gestures haptic feedback -->
+    <string name="haptic_feedback">Respuesta vibratoria</string>
+    <string name="haptic_feedback_summary">Vibrar al realizar algún gesto</string>
+
+    <!-- Actions -->
+    <string name="action_none">Nada</string>
+    <string name="action_home">Inicio</string>
+    <string name="action_power">Apagar pantalla</string>
+    <string name="action_wake">Despertar</string>
+    <string name="action_back">Atrás</string>
+    <string name="action_recents">Recientes</string>
+    <string name="action_last_app">Última aplicación</string>
+    <string name="action_volume_up">Subir volumen</string>
+    <string name="action_volume_down">Bajar volumen</string>
+    <string name="action_voice_assistant">Asistente de voz</string>
+    <string name="action_play_pause">Reproducir/Pausar</string>
+    <string name="action_previous_track">Canción anterior</string>
+    <string name="action_next_track">Canción siguiente</string>
+    <string name="action_flashlight">Linterna encendida/apagada</string>
+    <string name="action_camera">Abrir cámara</string>
+    <string name="action_screenshot">Tomar captura de pantalla</string>
+    <string name="action_browser">Abrir navegador</string>
+    <string name="action_dialer">Abrir marcador de teléfono</string>
+    <string name="action_email">Abrir correo electrónico</string>
+    <string name="action_messages">Abrir mensajes de teléfono</string>
+
+   <!-- Proximity sensor -->
+   <string name="allow_proximity_sensor_title">Permitir sensor de proximidad</string>
+   <string name="allow_proximity_sensor_summary">Verificar sensor de proximidad antes de realizar una acción</string>
+
+</resources>
