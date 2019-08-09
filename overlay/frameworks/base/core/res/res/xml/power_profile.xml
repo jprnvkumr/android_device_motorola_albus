@@ -14,6 +14,10 @@
     <item name="radio.active">120</item>
     <item name="radio.scanning">13</item>
     <array name="radio.on">
+        <value>24</value>
+        <value>20</value>
+        <value>15</value>
+        <value>10</value>
         <value>5</value>
         <value>5</value>
     </array>
@@ -59,4 +63,5 @@
     </array>
     <item name="cpu.idle">4</item>
     <item name="cpu.awake">13</item>
+    <item name="battery.capacity">3000</item>
 </device>
