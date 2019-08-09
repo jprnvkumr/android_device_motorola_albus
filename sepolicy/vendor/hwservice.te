@@ -1,3 +1,1 @@
 type fpc_extension_service, hwservice_manager_type;
-type hal_fingerprint_fpc, hwservice_manager_type;
-
