@@ -45,6 +45,12 @@
          The default is false. -->
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
 
+    <!-- Default value for proximity check on screen wake
+         NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
+    <bool name="config_proximityCheckOnWake">true</bool>
+    <integer name="config_proximityCheckTimeout">100</integer>
+    <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
 
@@ -356,13 +362,6 @@
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
-
-    <!-- Paths to the libraries that contain device specific key handlers -->
-    <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/MotoActions/MotoActions.apk</string>
-
-    <!-- Names of the key handler classes -->
-    <string name="config_deviceKeyHandlerClass" translatable="false">com.moto.actions.KeyHandler</string>
-
 
    <!-- Default files to pin via Pinner Service -->
    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
