@@ -18,14 +18,17 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/albus/full_albus.mk)
 
-# Inherit some common DOT stuff.
-TARGET_BOOT_ANIMATION_RES := 1080
+# Inherit some common AOKP stuff.
 TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, vendor/dot/config/common.mk)
+$(call inherit-product, vendor/aokp/configs/common.mk)
+
+# Boot animation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := albus
-PRODUCT_NAME := dot_albus
+PRODUCT_NAME := aokp_albus
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto Z2 Play
 PRODUCT_MANUFACTURER := motorola
